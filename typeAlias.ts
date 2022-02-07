@@ -1,7 +1,7 @@
 type String1 = string;
 
 type One = 1 | "One";
-
+//Tuple types
 type ArrayOneAndTwo = [1, 2, 3];
 
 type FirstType<T extends any[]> = T[0]
