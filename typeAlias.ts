@@ -4,6 +4,12 @@ type One = 1 | "One";
 //Tuple types
 type ArrayOneAndTwo = [1, 2, 3];
 
+type ArgumentType = ['hello' | 'world',  { address: string; name: string; age: number }, number];
+
+declare function testFunc(...args: ArgumentType)
+
+//testFunc('hello',{address:'eee'})
+
 type FirstType<T extends any[]> = T[0]
 type firstType = FirstType<ArrayOneAndTwo>
 
@@ -32,7 +38,7 @@ const carriage = train.next;
 console.log(carriage?.next)
 
 //type AwaiteD<T> = T extends Promise<infer U> ? U : T;
-type result = Awaited<Promise<{ a:any }>>;
+type result = Awaited<Promise<{ a: any }>>;
 
 type UnwrapArray<T> = T extends Array<infer U> ? U : never;
-type stringofArray= UnwrapArray<One[]>
+type stringofArray = UnwrapArray<One[]>

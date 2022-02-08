@@ -1,7 +1,7 @@
-type arrayType = [1, 2, 3]
+type tupleype = [1, 2, 3]
 type unionType = 1 | 2 | 3
 
-const arrayTest: arrayType = [1, 2, 3];
+const arrayTest: tupleype = [1, 2, 3];
 const unionTest: unionType[] = [1, 2, 3];
 
 const arrayOne = [4, 2, 3] as const;
